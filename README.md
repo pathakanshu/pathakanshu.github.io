@@ -5,9 +5,6 @@
 | 11 February 2026   | Assigned  |
 | 25 February 2026   | Due       |
 
-[![Gatorgrade](../../actions/workflows/grade.yml/badge.svg?branch=main)](../../actions/workflows/grade.yml)
-[![Playwright Tests](../../actions/workflows/playwright.yml/badge.svg?branch=main)](../../actions/workflows/playwright.yml)
-
 ## Asessment: Styling Pages in Astro
 
 ![](https://img.shields.io/badge/Assignment%20Type-Assessment-yellow)
