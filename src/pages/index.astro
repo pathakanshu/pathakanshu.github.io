@@ -1,12 +1,11 @@
 ---
-import BaseLayout from "../Layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "Home";
 ---
 
-<BaseLayout>
-    <!-- astro <slot /> -->
-    <main>
-        <h1>{pageTitle}</h1>
-        Index section stuff
-    </main>
+<BaseLayout pageTitle={pageTitle}>
+    <section>
+        <p>Welcome to my portfolio!</p>
+        <img src="/favicon.svg" alt="Astro Logo" />
+    </section>
 </BaseLayout>

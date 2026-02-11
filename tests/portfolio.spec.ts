@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 if(!process.env.BASE_URL) {
-  // When not running on Github Actions, use localhost
-  process.env.BASE_URL = "http://localhost:4321"
+  // When not running on Github Actions, use 127.0.0.1
+  process.env.BASE_URL = "http://127.0.0.1:4321"
 }
 
 test('has title', async ({ page }) => {

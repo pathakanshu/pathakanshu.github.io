@@ -1,9 +1,10 @@
 ---
-import BaseLayout from "../Layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "About";
 ---
 
-<BaseLayout>
-    <!-- astro <slot /> -->
-    About section stuff
+<BaseLayout pageTitle={pageTitle}>
+    <section>
+        <p>This is the about page.</p>
+    </section>
 </BaseLayout>
