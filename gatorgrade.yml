@@ -1,6 +1,12 @@
 - src/layouts/BaseLayout.astro:
-  check: MatchFileFragment
-  options:
-    fragment: 'link rel="stylesheet" href = "/style/style.css"'
-    count: 1
-    exact: true
+  - check: MatchFileRegex
+    options:
+      regex: 'link(\s)rel(\s)?=(\s)?"stylesheet"(\s)href(\s)?=(\s)?"/style/style.css"'
+      count: 1
+      exact: true
+- src/pages/index.astro:
+  - check: MatchFileRegex
+    options:
+      regex: '<Excerpt.*</Excerpt>'
+      count: 4
+      exact: true
