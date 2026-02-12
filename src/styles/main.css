@@ -1,0 +1,9 @@
+.col-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.col-item {
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
