@@ -46,7 +46,7 @@ header {
 }
 
 header strong {
-    color: #222;
+    color: var(--webco-printer-black);
 }
 
 nav {
