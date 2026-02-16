@@ -3,6 +3,10 @@
     color: #222;
 }
 
+:root {
+    --webco-color-purple-bg: #8752FF;
+}
+
 * {
     margin: 0;
     line-height: 2rem;
@@ -126,7 +130,7 @@ th, td {
 
 .full__purple_band {
     width: 100%;
-    background: #6E74E2;
+    background: var(--webco-color-purple-bg);
 } 
 
 .full__purple_band :is(h1, h2, h3, h4, h5, h6, p) {
