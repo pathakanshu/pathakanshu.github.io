@@ -52,7 +52,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #6E74E2;
+    color: var(--webco-color-purple-bg);
 }
 
 nav a:not(:last-of-type) {
