@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 
 if(!process.env.BASE_URL) {
   // When not running on Github Actions, use localhost
@@ -65,4 +66,10 @@ test('has h1 centered', async ({ page }) => {
 test('has h2 centered', async ({ page }) => {
   await page.goto(process.env.BASE_URL);
   await expect(page.getByRole('heading', { name: 'News Ipsum', level: 2 })).toHaveClass('centered');
+});
+
+test('passes WCAG A and AA standards', async ({page}) => {
+  await page.goto(process.env.BASE_URL);
+  const accessibilityScanResults = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
+  expect(accessibilityScanResults.violations).toEqual([]);
 });
