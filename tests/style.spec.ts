@@ -31,7 +31,7 @@ test('matches header', async ({ page}) =>{
 
 test('matches image columns', async ({ page}) =>{
   await page.goto(process.env.BASE_URL);
-  await expect(page.locator('section.full__three_column')).toHaveScreenshot(
+  await expect(page.locator('.full__three_column').first()).toHaveScreenshot(
     'three_by_three_img.png', 
     {maxDiffPixelRatio: 0.05}
   );
