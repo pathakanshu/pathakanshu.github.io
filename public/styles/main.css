@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* Ensure the body is at least as tall as the viewport */
+    min-height: 100vh;
+    /* Main layout is Grid */
+    display: grid;
+    /* Header/Footer take content size, Main takes remaining space (1fr) */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    box-sizing: border-box;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    /* Inner elements are Flex */
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+    padding: 2rem;
+}
+
+footer {
+    /* Inner elements are Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: footer;
+    background: gray;
+    padding: 1rem;
+    color: white;
+}
+
+#nav-list {
+    margin: 0;
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
