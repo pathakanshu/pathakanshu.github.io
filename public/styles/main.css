@@ -23,7 +23,51 @@ main {
     display: flex;
     flex-direction: column;
     grid-area: main;
-    padding: 2rem;
+    padding: 0 18rem;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-info h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+
+.main-info .lower-info {
+    display: flex;
+    direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-info .lower-info p{
+    display: flex;
+    direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.nonexpanding-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.nonexpanding-img-container img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: auto;
 }
 
 footer {

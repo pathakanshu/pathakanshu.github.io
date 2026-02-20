@@ -1,12 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "HI";
 ---
 
-<BaseLayout>
-
-    <h1>Anshu Pathak</h1>
-    <p>Software Engineering Student, Meadville, PA, Class of 2029</p>
-    <hr />
+<BaseLayout pageTitle={pageTitle}>
+    <div class="main-info">
+        <h1>Anshu Pathak</h1>
+        <div class="lower-info">
+            <p>
+                Software Engineering Student <br />
+                Based in Pennsylvania, USA <br />
+                Expected Graduation: 2029
+            </p>
+            <div class="nonexpanding-img-container">
+                <img src="../assets/images/TODO.jpg" alt="TODO: EMPTY" />
+            </div>
+        </div>
+    </div>
 
     <h2>Lorem</h2>
     <h3>Lorem</h3>
