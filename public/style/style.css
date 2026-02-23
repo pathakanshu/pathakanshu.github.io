@@ -161,7 +161,8 @@ th, td {
 }
 
 .fa-search {
-    color: #222;
+    color: var(--webco-printer-black);
+    background:  var(--webco-white);
 }
 
 .article__border_right:not(:last-of-type) {
