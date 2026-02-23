@@ -181,7 +181,9 @@ th, td {
   }
   
   .full__three_column, .full__four_column {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     row-gap: 3rem;
     column-gap: 0;
   }
