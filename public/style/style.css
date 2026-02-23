@@ -189,6 +189,16 @@ th, td {
     grid-gap: 2rem;
 }
 
+@media screen and (max-width: 850px) {
+    .full__four_column {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        row-gap: 3rem;
+        column-gap: 0;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
   header {
