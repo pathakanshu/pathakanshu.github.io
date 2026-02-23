@@ -43,13 +43,14 @@ main {
     direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
-.main-info .lower-info p{
+.main-info .lower-info p {
     display: flex;
-    direction: row;
     align-items: center;
-    justify-content: center;
+    text-align: right;
+    justify-content: right;
     font-size: 1.2rem;
 }
 
