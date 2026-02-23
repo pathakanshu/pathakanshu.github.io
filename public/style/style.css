@@ -112,6 +112,16 @@ th, td {
 #search {
     margin: 0 auto;
     width: 100%;
+    position:relative;
+}
+
+#search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 12.5%;
+    right: 2%;
 }
 
 .full__three_column {
@@ -141,12 +151,17 @@ th, td {
 }
 
 .input__rounded {
+    overflow: hidden;
     border: 0;
     border-radius: 8px;
     font-size: 1em;
     padding: .25rem;
     width: calc(100% - 1rem);
     text-align: center;
+}
+
+.fa-search {
+    color: #222;
 }
 
 .article__border_right:not(:last-of-type) {
@@ -176,8 +191,11 @@ th, td {
 
 @media screen and (max-width: 767px) {
 
-  nav {
-     grid-column: span 2;
+  header {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    height: unset;
   }
   
   .full__three_column, .full__four_column {
@@ -193,7 +211,8 @@ th, td {
   }
 
   #search {
-    display: none;
+    position: relative;
+    width: 50vw;
   }
 
 }
