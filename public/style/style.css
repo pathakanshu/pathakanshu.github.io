@@ -109,6 +109,10 @@ th, td {
     border: 1px solid var(--webco-color-gray);
 }
 
+#menu {
+    position: relative;
+}
+
 #search {
     margin: 0 auto;
     width: 100%;
@@ -122,6 +126,23 @@ th, td {
     cursor: pointer;
     top: .125rem;
     border: none;
+}
+
+.mode-toggle {
+    position: relative;
+    width: 2rem;
+    height: 1rem;
+}
+
+.mode-toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    background: var(--webco-color-gray);
+    border-radius: 34px;
+
 }
 
 .full__three_column {
