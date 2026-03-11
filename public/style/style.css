@@ -115,6 +115,15 @@ th, td {
     position:relative;
 }
 
+#search button {
+    background: none;
+    position: absolute;
+    right: .5rem;
+    cursor: pointer;
+    top: .125rem;
+    border: none;
+}
+
 .full__three_column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,6 +158,11 @@ th, td {
     padding: .25rem;
     width: calc(100% - 1rem);
     text-align: center;
+}
+
+.fa-search {
+    color: var(--webco-printer-black);
+    background-color: var(--webco-white);
 }
 
 .article__border_right:not(:last-of-type) {
