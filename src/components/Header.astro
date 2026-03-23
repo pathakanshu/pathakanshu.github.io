@@ -1,11 +1,19 @@
 ---
-import Navigation from './Navigation.astro'
+import Navigation from "./Navigation.astro";
 ---
+
 <header>
     <strong>WebCo</strong>
-    <form id = "search">
-        <input name = "search" type = "text" class = "input__rounded" aria-label = "Search">
-        <button type = "submit"><i class = "fa fa-search"></i></button>
+    <form id="search">
+        <input
+            name="search"
+            type="text"
+            class="input__rounded"
+            aria-label="Search"
+        />
+        <button type="submit" aria-label="Submit Search"
+            ><i class="fa fa-search"></i></button
+        >
     </form>
     <nav>
         <Navigation />
