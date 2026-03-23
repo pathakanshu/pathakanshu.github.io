@@ -16,7 +16,7 @@ This project benchmark requires you to demonstrate learning in `astro`. Namely:
 * integrate these components into your pages for a unified, cross-site experience
 * adds content to these pages using `section`, `main`, and `p`, `img` (with alt text) tags appropriately
   * see our course textbook _The Coding Workbook_ for more on these tags
-
+ 
 ### Testing
 
 To run tests for this assignment:
