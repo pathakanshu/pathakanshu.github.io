@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Personal Portfolio",
+      "description": "A personal portfolio website built using React and hosted on GitHub Pages.",
+      "link": "",
+      "image": "https://placehold.co/320x160",
+      "skills": "Python, JavaScript, HTML/CSS"
+    },
+    {
+      "name": "E-commerce Website",
+      "description": "An e-commerce website built using Django and React, featuring user authentication and a shopping cart.",
+      "link": "",
+      "image": "https://placehold.co/320x160",
+      "skills": "Python, JavaScript, HTML/CSS"
+    },
+    {
+      "name": "Chat Application",
+      "description": "A real-time chat application built using Node.js and Socket.io.",
+      "link": "",
+      "image": "https://placehold.co/320x160",
+      "skills": "JavaScript, HTML/CSS"
+    }
+  ]
+}
