@@ -1,44 +1,86 @@
 ---
-import Band from '../components/Band.astro';
-import Excerpt from '../components/Excerpt.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Band from "../components/Band.astro";
+import Excerpt from "../components/Excerpt.astro";
+import BaseLayout from "../Layouts/BaseLayout.astro";
 const pageTitle = "Lorem Ipsum";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-	<section aria-labelledby = "primary-heading">
-		<h1 class = "centered" id = "primary-heading">{pageTitle}</h1>
-		<div class = "full__three_column gap__3_rem">
-			<img src = "/img/picture_placeholder.png" alt = "Image placeholder" />
-			<img src = "/img/picture_placeholder.png" alt = "Image placeholder" />
-			<img src = "/img/picture_placeholder.png" alt = "Image placeholder" />
-		</div>
-	</section>
-	<Band bandTitle = "Lorem Ipsum">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut libero eu 
-		justo mattis vulputate. Etiam accumsan sollicitudin turpis, a aliquam arcu. Donec 
-		vel mi eu mi varius tincidunt id nec urna. Duis urna massa, hendrerit nec neque vel, 
-		rutrum congue sem. Vivamus felis mi, ornare id dignissim ac, viverra sed quam. 
-		In nec consectetur nulla. Aliquam cursus blandit magna, vel condimentum purus mattis 
-		vitae. Sed nec tempus nibh, quis posuere massa. Etiam a placerat urna. Aliquam erat 
-		volutpat. Donec gravida tortor arcu, sed fringilla arcu laoreet sed. Suspendisse 
-		consectetur felis sem, ut interdum orci ornare non. Donec cursus massa non euismod 
-		luctus.
-	</Band>
-	<section aria-labelledby = "news-heading">
-		<h2 id = "news-heading" class = "centered">News Ipsum</h2>
-		<div class = "full__four_column container text__column">
-			<Excerpt excerptTitle = "Lorem Ipsum">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien metus. Suspendisse congue hendrerit dapibus. Mauris ut consectetur quam, vel auctor elit. Nulla gravida urna lacinia est dapibus faucibus. Vivamus nulla felis, consequat eget dolor id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta imperdiet sit amet et nisi. Nam maximus libero vel sodales blandit. Quisque vitae sagittis elit. Fusce at scelerisque magna. Suspendisse bibendum nulla non scelerisque interdum. Nullam vel lacus congue, tristique velit pretium, auctor mauris. Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
-			</Excerpt>
-			<Excerpt excerptTitle = "Etiam Accumsan">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien metus. Suspendisse congue hendrerit dapibus. Mauris ut consectetur quam, vel auctor elit. Nulla gravida urna lacinia est dapibus faucibus. Vivamus nulla felis, consequat eget dolor id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta imperdiet sit amet et nisi. Nam maximus libero vel sodales blandit. Quisque vitae sagittis elit. Fusce at scelerisque magna. Suspendisse bibendum nulla non scelerisque interdum. Nullam vel lacus congue, tristique velit pretium, auctor mauris. Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
-			</Excerpt>
-			<Excerpt excerptTitle = "Donec Gravida">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien metus. Suspendisse congue hendrerit dapibus. Mauris ut consectetur quam, vel auctor elit. Nulla gravida urna lacinia est dapibus faucibus. Vivamus nulla felis, consequat eget dolor id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta imperdiet sit amet et nisi. Nam maximus libero vel sodales blandit. Quisque vitae sagittis elit. Fusce at scelerisque magna. Suspendisse bibendum nulla non scelerisque interdum. Nullam vel lacus congue, tristique velit pretium, auctor mauris. Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
-			</Excerpt>
-			<Excerpt excerptTitle = "Suspendisse Consectetur">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien metus. Suspendisse congue hendrerit dapibus. Mauris ut consectetur quam, vel auctor elit. Nulla gravida urna lacinia est dapibus faucibus. Vivamus nulla felis, consequat eget dolor id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta imperdiet sit amet et nisi. Nam maximus libero vel sodales blandit. Quisque vitae sagittis elit. Fusce at scelerisque magna. Suspendisse bibendum nulla non scelerisque interdum. Nullam vel lacus congue, tristique velit pretium, auctor mauris. Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
-			</Excerpt>
-		</div>
-	</section>
+    <section aria-labelledby="primary-heading">
+        <h1 class="centered" id="primary-heading">{pageTitle}</h1>
+        <div class="full__three_column gap__3_rem">
+            <img src="/img/picture_placeholder.png" alt="Image placeholder" />
+            <img src="/img/picture_placeholder.png" alt="Image placeholder" />
+            <img src="/img/picture_placeholder.png" alt="Image placeholder" />
+        </div>
+    </section>
+    <Band bandTitle="Lorem Ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut
+        libero eu justo mattis vulputate. Etiam accumsan sollicitudin turpis, a
+        aliquam arcu. Donec vel mi eu mi varius tincidunt id nec urna. Duis urna
+        massa, hendrerit nec neque vel, rutrum congue sem. Vivamus felis mi,
+        ornare id dignissim ac, viverra sed quam. In nec consectetur nulla.
+        Aliquam cursus blandit magna, vel condimentum purus mattis vitae. Sed
+        nec tempus nibh, quis posuere massa. Etiam a placerat urna. Aliquam erat
+        volutpat. Donec gravida tortor arcu, sed fringilla arcu laoreet sed.
+        Suspendisse consectetur felis sem, ut interdum orci ornare non. Donec
+        cursus massa non euismod luctus.
+    </Band>
+    <section aria-labelledby="news-heading">
+        <h2 id="news-heading" class="centered">News Ipsum</h2>
+        <div class="full__four_column container text__column">
+            <Excerpt excerptTitle="Lorem Ipsum">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien
+                metus. Suspendisse congue hendrerit dapibus. Mauris ut
+                consectetur quam, vel auctor elit. Nulla gravida urna lacinia
+                est dapibus faucibus. Vivamus nulla felis, consequat eget dolor
+                id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta
+                imperdiet sit amet et nisi. Nam maximus libero vel sodales
+                blandit. Quisque vitae sagittis elit. Fusce at scelerisque
+                magna. Suspendisse bibendum nulla non scelerisque interdum.
+                Nullam vel lacus congue, tristique velit pretium, auctor mauris.
+                Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
+            </Excerpt>
+            <Excerpt excerptTitle="Etiam Accumsan">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien
+                metus. Suspendisse congue hendrerit dapibus. Mauris ut
+                consectetur quam, vel auctor elit. Nulla gravida urna lacinia
+                est dapibus faucibus. Vivamus nulla felis, consequat eget dolor
+                id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta
+                imperdiet sit amet et nisi. Nam maximus libero vel sodales
+                blandit. Quisque vitae sagittis elit. Fusce at scelerisque
+                magna. Suspendisse bibendum nulla non scelerisque interdum.
+                Nullam vel lacus congue, tristique velit pretium, auctor mauris.
+                Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
+            </Excerpt>
+            <Excerpt excerptTitle="Donec Gravida">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien
+                metus. Suspendisse congue hendrerit dapibus. Mauris ut
+                consectetur quam, vel auctor elit. Nulla gravida urna lacinia
+                est dapibus faucibus. Vivamus nulla felis, consequat eget dolor
+                id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta
+                imperdiet sit amet et nisi. Nam maximus libero vel sodales
+                blandit. Quisque vitae sagittis elit. Fusce at scelerisque
+                magna. Suspendisse bibendum nulla non scelerisque interdum.
+                Nullam vel lacus congue, tristique velit pretium, auctor mauris.
+                Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
+            </Excerpt>
+            <Excerpt excerptTitle="Suspendisse Consectetur">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur vel iaculis lacus, et fringilla ex. Quisque sed sapien
+                metus. Suspendisse congue hendrerit dapibus. Mauris ut
+                consectetur quam, vel auctor elit. Nulla gravida urna lacinia
+                est dapibus faucibus. Vivamus nulla felis, consequat eget dolor
+                id, bibendum interdum lacus. Sed sit amet ipsum et nibh porta
+                imperdiet sit amet et nisi. Nam maximus libero vel sodales
+                blandit. Quisque vitae sagittis elit. Fusce at scelerisque
+                magna. Suspendisse bibendum nulla non scelerisque interdum.
+                Nullam vel lacus congue, tristique velit pretium, auctor mauris.
+                Fusce in sem sit amet eros feugiat bibendum a nec urna. Morbi.
+            </Excerpt>
+        </div>
+    </section>
 </BaseLayout>
