@@ -2,18 +2,27 @@
 import Band from "../components/Band.astro";
 import Excerpt from "../components/Excerpt.astro";
 import BaseLayout from "../Layouts/BaseLayout.astro";
+import Slider from "../components/Slider.tsx";
+
 const pageTitle = "Lorem Ipsum";
+
+const slides = [
+    { src: "/img/picture_placeholder.png", alt: "Image placeholder" },
+    { src: "/img/picture_placeholder.png", alt: "Image placeholder" },
+    { src: "/img/picture_placeholder.png", alt: "Image placeholder" },
+    { src: "https://placehold.co/600x400", alt: "Image placeholder" },
+    { src: "https://placehold.co/1200x800", alt: "Image placeholder" },
+    { src: "https://placehold.co/600x400", alt: "Image placeholder" },
+    { src: "https://placehold.co/1200x800", alt: "Image placeholder" },
+    { src: "https://placehold.co/600x400", alt: "Image placeholder" },
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <section aria-labelledby="primary-heading">
-        <h1 class="centered" id="primary-heading">{pageTitle}</h1>
-        <div class="full__three_column gap__3_rem">
-            <img src="/img/picture_placeholder.png" alt="Image placeholder" />
-            <img src="/img/picture_placeholder.png" alt="Image placeholder" />
-            <img src="/img/picture_placeholder.png" alt="Image placeholder" />
-        </div>
-    </section>
+    <h1 aria-labelledby="primary-heading" class="centered" id="primary-heading">
+        {pageTitle}
+    </h1>
+    <Slider client:load slides={slides} />
     <Band bandTitle="Lorem Ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut
         libero eu justo mattis vulputate. Etiam accumsan sollicitudin turpis, a
