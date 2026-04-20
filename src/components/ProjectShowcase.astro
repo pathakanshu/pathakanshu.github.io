@@ -10,13 +10,11 @@ const { ProjectName, Image, ImageAlt, Skills } = Astro.props;
     <div class="section-img">
         <img src={Image} alt={ImageAlt} />
     </div>
-    <div class="skills-container">
-        <div class="skills">
-            {
-                Skills.split(",").map((skill: string) => (
-                    <span class="skill">{skill.trim()}</span>
-                ))
-            }
-        </div>
+    <div class="skills-list">
+        {
+            Skills.split(",").map((skill: string) => (
+                <span class="skill-tag">{skill.trim()}</span>
+            ))
+        }
     </div>
 </div>
