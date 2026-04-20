@@ -2,19 +2,22 @@
 const { ProjectName, Image, ImageAlt, Skills } = Astro.props;
 ---
 
-<div class="section-grid">
+<article class="section-grid">
     <div class="section-text">
         <h3>{ProjectName}</h3>
-        <slot />
+        <p>
+            <slot />
+        </p>
+        <div class="skills-list" aria-label="Project skills">
+            {
+                Skills.split(",").map((skill: string) => (
+                    <span class="skill-tag">{skill.trim()}</span>
+                ))
+            }
+        </div>
     </div>
+
     <div class="section-img">
-        <img src={Image} alt={ImageAlt} />
+        <img src={Image} alt={ImageAlt} loading="lazy" />
     </div>
-    <div class="skills-list">
-        {
-            Skills.split(",").map((skill: string) => (
-                <span class="skill-tag">{skill.trim()}</span>
-            ))
-        }
-    </div>
-</div>
+</article>

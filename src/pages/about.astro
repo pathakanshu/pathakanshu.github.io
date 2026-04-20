@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "About | Anshu Pathak";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <section class="page-header">
+        <h1>About</h1>
+        <p>
+            I’m a Software Engineering student focused on building clear,
+            reliable, and user-centered software.
+        </p>
+    </section>
+
+    <section class="about-grid">
+        <article class="panel">
+            <h2>Who I Am</h2>
+            <p>
+                I study software engineering in Pennsylvania and spend most of
+                my time building web applications, improving code quality, and
+                learning modern development practices.
+            </p>
+            <p>
+                I care about clean architecture, readable code, and products
+                that solve real problems without unnecessary complexity.
+            </p>
+        </article>
+
+        <aside class="panel">
+            <h2>Quick Facts</h2>
+            <ul class="facts-list">
+                <li><strong>Location:</strong> Pennsylvania, USA</li>
+                <li><strong>Expected Graduation:</strong> 2029</li>
+                <li><strong>Focus:</strong> Full-stack development</li>
+                <li>
+                    <strong>Interests:</strong> Web platforms, DX, and product design
+                </li>
+            </ul>
+        </aside>
+    </section>
+
+    <section class="panel">
+        <h2>Skills</h2>
+        <div class="skill-groups">
+            <div>
+                <h3>Frontend</h3>
+                <p>Astro, React, JavaScript, TypeScript, HTML, CSS</p>
+            </div>
+            <div>
+                <h3>Backend</h3>
+                <p>
+                    Python, Node.js, API design, authentication, data modeling
+                </p>
+            </div>
+            <div>
+                <h3>Tooling</h3>
+                <p>Git, GitHub, testing workflows, linting, CI basics</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel cta">
+        <h2>Let’s Build Something</h2>
+        <p>
+            If you want to collaborate, discuss ideas, or just talk engineering,
+            I’m always open to a good conversation.
+        </p>
+        <div class="actions">
+            <a class="btn btn-primary" href="/projects">View Projects</a>
+            <a class="btn btn-secondary" href="/contact">Contact</a>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .page-header {
+        display: grid;
+        gap: 0.75rem;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 1rem;
+    }
+
+    .panel {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-none);
+        padding: 1rem;
+    }
+
+    .facts-list {
+        list-style: none;
+        display: grid;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .skill-groups {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .skill-groups h3 {
+        margin-bottom: 0.35rem;
+    }
+
+    .cta {
+        display: grid;
+        gap: 0.75rem;
+    }
+
+    .actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+        .about-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .skill-groups {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

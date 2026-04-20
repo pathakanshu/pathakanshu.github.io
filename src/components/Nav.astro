@@ -1,8 +1,71 @@
+---
+const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/contact" },
+];
+---
+
 <nav>
     <ul id="nav-list">
-        <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about">About</a></li>
-        <li><a class="nav-link" href="/projects">Projects</a></li>
-        <li><a class="nav-link" href="/contact">Contacts</a></li>
+        {
+            navItems.map((item) => (
+                <li>
+                    <a class="nav-link" href={item.href}>
+                        {item.label}
+                    </a>
+                </li>
+            ))
+        }
     </ul>
 </nav>
+
+<style>
+    nav {
+        padding: 0 2rem;
+    }
+
+    #nav-list {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+        padding: 1.5rem 0;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+        font-size: 1rem;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+            90deg,
+            var(--gold-accent),
+            var(--coffee-medium)
+        );
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-link:hover {
+        color: var(--coffee-medium);
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+    }
+</style>

@@ -1,41 +1,106 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-// import BaseLayout from "../Layouts/BaseLayout.astro"
-
 import ProjectShowcase from "../components/ProjectShowcase.astro";
 import projects from "../data/projects.json";
-const pageTitle = "HI";
+
+const pageTitle = "Anshu Pathak | Software Engineer";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="main-info">
-        <h1>Anshu Pathak</h1>
-        <div class="lower-info">
-            <p>
-                Software Engineering Student <br />
-                Based in Pennsylvania, USA <br />
-                Expected Graduation: 2029
-            </p>
-            <div class="nonexpanding-img-container">
-                <img src="https://placehold.co/320x160" alt="TODO: EMPTY" />
+    <section class="main-info">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <h1>Anshu Pathak</h1>
+                <div class="lower-info">
+                    <p>Software Engineering Student</p>
+                    <p>Pennsylvania, USA · Expected Graduation 2029</p>
+                    <p>Focused on building clean, useful, reliable software.</p>
+                </div>
+            </div>
+
+            <div class="hero-image" aria-label="Hero placeholder image">
+                <img
+                    src="https://placehold.co/640x360"
+                    alt="General placeholder"
+                    loading="eager"
+                    decoding="async"
+                />
             </div>
         </div>
-    </div>
+    </section>
 
-    <h2>Projects</h2>
+    <section>
+        <h2>Featured Projects</h2>
+        <p>
+            Selected work across frontend and backend development. Clear
+            implementations, practical problem-solving, and maintainable code.
+        </p>
+        <div class="projects-section">
+            {
+                projects.projects.map((project: any) => (
+                    <ProjectShowcase
+                        ProjectName={project.name}
+                        Image={project.image}
+                        ImageAlt={project.name}
+                        Skills={project.skills}
+                    >
+                        {project.description}
+                    </ProjectShowcase>
+                ))
+            }
+        </div>
+    </section>
 
-    {
-        projects.projects.map((project: any) => (
-            <ProjectShowcase
-                ProjectName={project.name}
-                Image={project.image}
-                ImageAlt={project.image}
-                Skills={project.skills}
-            >
-                {project.description}
-            </ProjectShowcase>
-        ))
+    <section class="cta-section">
+        <h2>Work With Me</h2>
+        <p>
+            I’m open to internships, collaborations, and interesting software
+            projects.
+        </p>
+        <div class="cta-buttons">
+            <a href="/projects" class="btn btn-primary">View Projects</a>
+            <a href="/about" class="btn btn-secondary">About Me</a>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+        gap: 1rem;
+        align-items: center;
     }
 
-    <h2>Ipsum</h2>
-</BaseLayout>
+    .hero-copy h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-image {
+        border: 1px solid var(--border);
+        background: var(--surface-soft);
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            aspect-ratio: 16 / 10;
+        }
+    }
+</style>

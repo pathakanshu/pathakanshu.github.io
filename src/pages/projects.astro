@@ -2,30 +2,116 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectShowcase from "../components/ProjectShowcase.astro";
 import projects from "../data/projects.json";
-const pageTitle = "Projects";
+
+const pageTitle = "Projects | Anshu Pathak";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1>Projects</h1>
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam deleniti
-        dolore vel, iusto minima incidunt autem molestias repellat nemo fuga
-        eius nostrum dicta praesentium accusamus consequatur culpa excepturi
-        nulla distinctio.
-    </p>
-    <section class="projects-section">
+    <section class="page-header">
+        <h1>Projects</h1>
+        <p>
+            A curated selection of work focused on clear UX, strong engineering
+            fundamentals, and practical problem-solving.
+        </p>
+    </section>
+
+    <section class="projects-section" aria-label="Project list">
         {
             projects.projects.map((project: any) => (
                 <ProjectShowcase
                     ProjectName={project.name}
                     Image={project.image}
-                    ImageAlt={project.image}
+                    ImageAlt={project.name}
                     Skills={project.skills}
                 >
                     {project.description}
                 </ProjectShowcase>
             ))
         }
+
+        {
+            projects.projects.length === 0 && (
+                <div class="empty-state">
+                    <h2>No projects yet</h2>
+                    <p>
+                        I'm currently preparing case studies. Check back soon.
+                    </p>
+                </div>
+            )
+        }
     </section>
-    <div class="project-card"></div>
+
+    <section class="page-cta">
+        <p>Want to see more or collaborate on something meaningful?</p>
+        <div class="cta-actions">
+            <a href="/" class="btn btn-secondary">Back Home</a>
+            <a href="/contact" class="btn btn-primary">Contact Me</a>
+        </div>
+    </section>
 </BaseLayout>
+
+<style>
+    .page-header {
+        display: grid;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1.5rem;
+    }
+
+    .page-header h1 {
+        margin: 0;
+    }
+
+    .page-header p {
+        margin: 0;
+        max-width: 68ch;
+    }
+
+    .projects-section {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .empty-state {
+        border: 1px solid var(--border);
+        background: var(--surface);
+        padding: 1.25rem;
+        border-radius: var(--radius-none);
+    }
+
+    .empty-state h2 {
+        margin: 0 0 0.5rem 0;
+    }
+
+    .empty-state p {
+        margin: 0;
+    }
+
+    .page-cta {
+        border-top: 1px solid var(--border);
+        padding-top: 1.5rem;
+        display: grid;
+        gap: 0.9rem;
+    }
+
+    .page-cta p {
+        margin: 0;
+    }
+
+    .cta-actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px) {
+        .cta-actions {
+            width: 100%;
+        }
+
+        .cta-actions .btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
