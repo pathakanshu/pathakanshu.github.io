@@ -10,6 +10,7 @@ const skillSlugs: Record<string, string> = {
     "HTML/CSS": "html5",
     HTML: "html5",
     CSS: "css3",
+    "CSS Architecture": "css3",
     Django: "django",
     APIs: "insomnia",
     PostgreSQL: "postgresql",
@@ -27,12 +28,24 @@ const skillSlugs: Record<string, string> = {
 
 function getSlug(skill: string): string {
     const trimmed = skill.trim();
-    // Handle cases like "HTML/CSS" or other slash-separated skills
-    if (trimmed.includes("/")) {
-        const firstPart = trimmed.split("/")[0];
-        return skillSlugs[trimmed] || skillSlugs[firstPart] || "codeforces";
+
+    // 1. Direct match
+    if (skillSlugs[trimmed]) return skillSlugs[trimmed];
+
+    // 2. Multi-word starts-with match (e.g., "CSS Architecture" -> "CSS")
+    for (const key in skillSlugs) {
+        if (trimmed.toLowerCase().startsWith(key.toLowerCase())) {
+            return skillSlugs[key];
+        }
     }
-    return skillSlugs[trimmed] || "codeforces";
+
+    // 3. Slash fallback (e.g., "HTML/CSS" -> "HTML")
+    if (trimmed.includes("/")) {
+        const firstPart = trimmed.split("/")[0].trim();
+        return skillSlugs[firstPart] || "codeforces";
+    }
+
+    return "codeforces";
 }
 ---
 
