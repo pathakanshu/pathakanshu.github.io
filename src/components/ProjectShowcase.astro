@@ -7,7 +7,8 @@ const skillSlugs: Record<string, string> = {
     JavaScript: "javascript",
     Python: "python",
     "Node.js": "nodedotjs",
-    "HTML/CSS": "css3",
+    "HTML/CSS": "html5",
+    HTML: "html5",
     CSS: "css3",
     Django: "django",
     APIs: "insomnia",
@@ -26,6 +27,11 @@ const skillSlugs: Record<string, string> = {
 
 function getSlug(skill: string): string {
     const trimmed = skill.trim();
+    // Handle cases like "HTML/CSS" or other slash-separated skills
+    if (trimmed.includes("/")) {
+        const firstPart = trimmed.split("/")[0];
+        return skillSlugs[trimmed] || skillSlugs[firstPart] || "codeforces";
+    }
     return skillSlugs[trimmed] || "codeforces";
 }
 ---
