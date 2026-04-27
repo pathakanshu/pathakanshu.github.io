@@ -9,7 +9,7 @@ const pageTitle = "About | Anshu Pathak";
         <span class="hero-subtitle">Profile</span>
         <h1>Engineering the Future.</h1>
         <p>
-            I’m a Software Engineering student focused on building performant,
+            I'm a Software Engineering student focused on building performant,
             robust, and highly polished digital experiences. I believe great
             code should look as good as it works.
         </p>
@@ -59,30 +59,66 @@ const pageTitle = "About | Anshu Pathak";
             <div class="skill-category">
                 <h3>Frontend</h3>
                 <div class="skill-group">
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Astro</span>
-                    <span class="skill-tag">CSS Architecture</span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">⚛️</span>
+                        React
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🎨</span>
+                        TypeScript
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🌟</span>
+                        Astro
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🎭</span>
+                        CSS Architecture
+                    </span>
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3>Backend</h3>
                 <div class="skill-group">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">REST APIs</span>
-                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🐍</span>
+                        Python
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">⚙️</span>
+                        Node.js
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🔌</span>
+                        REST APIs
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🗄️</span>
+                        PostgreSQL
+                    </span>
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3>Systems</h3>
                 <div class="skill-group">
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Docker Basics</span>
-                    <span class="skill-tag">Unix/Linux</span>
-                    <span class="skill-tag">Vercel/Cloudflare</span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">📦</span>
+                        Git/GitHub
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🐳</span>
+                        Docker Basics
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">🖥️</span>
+                        Unix/Linux
+                    </span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">☁️</span>
+                        Vercel/Cloudflare
+                    </span>
                 </div>
             </div>
         </div>
@@ -91,8 +127,8 @@ const pageTitle = "About | Anshu Pathak";
     <section class="panel cta">
         <h2>Want to know more?</h2>
         <p>
-            I’m actively seeking internships and looking to collaborate on
-            ambitious projects. Let’s connect.
+            I'm actively seeking internships and looking to collaborate on
+            ambitious projects. Let's connect.
         </p>
         <div class="actions">
             <a href="/contact" class="btn btn-primary">Get in Touch</a>
@@ -121,7 +157,7 @@ const pageTitle = "About | Anshu Pathak";
     }
 
     .facts-list span {
-        font-family: var(--font-mono);
+        font-family: var(--font-sans);
         font-size: 0.8rem;
         color: var(--text-secondary);
         text-transform: uppercase;
@@ -142,7 +178,7 @@ const pageTitle = "About | Anshu Pathak";
 
     .skill-group {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 0.75rem;
     }
 </style>

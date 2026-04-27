@@ -1,5 +1,33 @@
 ---
 const { ProjectName, Image, ImageAlt, Skills } = Astro.props;
+
+const skillIcons: Record<string, string> = {
+    React: "⚛️",
+    TypeScript: "🎨",
+    JavaScript: "✨",
+    Python: "🐍",
+    "Node.js": "⚙️",
+    "HTML/CSS": "🎭",
+    CSS: "🎭",
+    Django: "🔧",
+    APIs: "🔌",
+    PostgreSQL: "🗄️",
+    MongoDB: "🍃",
+    Docker: "🐳",
+    Git: "📦",
+    GitHub: "📦",
+    Astro: "🌟",
+    Vue: "💚",
+    Angular: "🔴",
+    Express: "⚡",
+    FastAPI: "⚡",
+    REST: "🔌",
+};
+
+function getIcon(skill: string): string {
+    const trimmed = skill.trim();
+    return skillIcons[trimmed] || "💻";
+}
 ---
 
 <article class="section-grid">
@@ -11,7 +39,10 @@ const { ProjectName, Image, ImageAlt, Skills } = Astro.props;
         <div class="skills-list" aria-label="Project skills">
             {
                 Skills.split(",").map((skill: string) => (
-                    <span class="skill-tag">{skill.trim()}</span>
+                    <span class="skill-tag">
+                        <span class="skill-icon">{getIcon(skill)}</span>
+                        {skill.trim()}
+                    </span>
                 ))
             }
         </div>
