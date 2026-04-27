@@ -60,19 +60,39 @@ const pageTitle = "About | Anshu Pathak";
                 <h3>Frontend</h3>
                 <div class="skill-group">
                     <span class="skill-tag">
-                        <span class="skill-icon">⚛️</span>
+                        <img
+                            src="https://cdn.simpleicons.org/react/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="React"
+                        />
                         React
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🎨</span>
+                        <img
+                            src="https://cdn.simpleicons.org/typescript/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="TypeScript"
+                        />
                         TypeScript
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🌟</span>
+                        <img
+                            src="https://cdn.simpleicons.org/astro/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Astro"
+                        />
                         Astro
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🎭</span>
+                        <img
+                            src="https://cdn.simpleicons.org/css3/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="CSS Architecture"
+                        />
                         CSS Architecture
                     </span>
                 </div>
@@ -82,19 +102,39 @@ const pageTitle = "About | Anshu Pathak";
                 <h3>Backend</h3>
                 <div class="skill-group">
                     <span class="skill-tag">
-                        <span class="skill-icon">🐍</span>
+                        <img
+                            src="https://cdn.simpleicons.org/python/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Python"
+                        />
                         Python
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">⚙️</span>
+                        <img
+                            src="https://cdn.simpleicons.org/nodedotjs/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Node.js"
+                        />
                         Node.js
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🔌</span>
+                        <img
+                            src="https://cdn.simpleicons.org/insomnia/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="REST APIs"
+                        />
                         REST APIs
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🗄️</span>
+                        <img
+                            src="https://cdn.simpleicons.org/postgresql/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="PostgreSQL"
+                        />
                         PostgreSQL
                     </span>
                 </div>
@@ -104,19 +144,39 @@ const pageTitle = "About | Anshu Pathak";
                 <h3>Systems</h3>
                 <div class="skill-group">
                     <span class="skill-tag">
-                        <span class="skill-icon">📦</span>
+                        <img
+                            src="https://cdn.simpleicons.org/github/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Git/GitHub"
+                        />
                         Git/GitHub
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🐳</span>
+                        <img
+                            src="https://cdn.simpleicons.org/docker/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Docker Basics"
+                        />
                         Docker Basics
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">🖥️</span>
+                        <img
+                            src="https://cdn.simpleicons.org/linux/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Unix/Linux"
+                        />
                         Unix/Linux
                     </span>
                     <span class="skill-tag">
-                        <span class="skill-icon">☁️</span>
+                        <img
+                            src="https://cdn.simpleicons.org/vercel/EDEDED"
+                            width="16"
+                            height="16"
+                            alt="Vercel/Cloudflare"
+                        />
                         Vercel/Cloudflare
                     </span>
                 </div>
@@ -180,5 +240,18 @@ const pageTitle = "About | Anshu Pathak";
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
+    }
+
+    .skill-tag img {
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+    }
+
+    .skill-tag:hover img {
+        opacity: 1;
+    }
+
+    :global(.light) .skill-tag img {
+        filter: invert(1);
     }
 </style>

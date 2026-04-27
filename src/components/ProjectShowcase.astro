@@ -1,32 +1,32 @@
 ---
 const { ProjectName, Image, ImageAlt, Skills } = Astro.props;
 
-const skillIcons: Record<string, string> = {
-    React: "⚛️",
-    TypeScript: "🎨",
-    JavaScript: "✨",
-    Python: "🐍",
-    "Node.js": "⚙️",
-    "HTML/CSS": "🎭",
-    CSS: "🎭",
-    Django: "🔧",
-    APIs: "🔌",
-    PostgreSQL: "🗄️",
-    MongoDB: "🍃",
-    Docker: "🐳",
-    Git: "📦",
-    GitHub: "📦",
-    Astro: "🌟",
-    Vue: "💚",
-    Angular: "🔴",
-    Express: "⚡",
-    FastAPI: "⚡",
-    REST: "🔌",
+const skillSlugs: Record<string, string> = {
+    React: "react",
+    TypeScript: "typescript",
+    JavaScript: "javascript",
+    Python: "python",
+    "Node.js": "nodedotjs",
+    "HTML/CSS": "css3",
+    CSS: "css3",
+    Django: "django",
+    APIs: "insomnia",
+    PostgreSQL: "postgresql",
+    MongoDB: "mongodb",
+    Docker: "docker",
+    Git: "git",
+    GitHub: "github",
+    Astro: "astro",
+    Vue: "vuedotjs",
+    Angular: "angular",
+    Express: "express",
+    FastAPI: "fastapi",
+    REST: "postman",
 };
 
-function getIcon(skill: string): string {
+function getSlug(skill: string): string {
     const trimmed = skill.trim();
-    return skillIcons[trimmed] || "💻";
+    return skillSlugs[trimmed] || "codeforces";
 }
 ---
 
@@ -40,7 +40,13 @@ function getIcon(skill: string): string {
             {
                 Skills.split(",").map((skill: string) => (
                     <span class="skill-tag">
-                        <span class="skill-icon">{getIcon(skill)}</span>
+                        <img
+                            src={`https://cdn.simpleicons.org/${getSlug(skill)}/EDEDED`}
+                            width="16"
+                            height="16"
+                            alt={skill.trim()}
+                            class="skill-icon-img"
+                        />
                         {skill.trim()}
                     </span>
                 ))
@@ -52,3 +58,18 @@ function getIcon(skill: string): string {
         <img src={Image} alt={ImageAlt} loading="lazy" />
     </div>
 </article>
+
+<style>
+    .skill-icon-img {
+        opacity: 0.8;
+    }
+
+    .section-grid:hover .skill-icon-img {
+        opacity: 1;
+        filter: none;
+    }
+
+    :global(.light) .skill-icon-img {
+        filter: invert(1);
+    }
+</style>
