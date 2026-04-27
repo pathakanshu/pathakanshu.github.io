@@ -1,6 +1,11 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
 <footer>
     <div class="footer-content">
-        <p>&copy; 2026 Anshu Pathak</p>
+        <p>&copy; {currentYear} Anshu Pathak. All rights reserved.</p>
+        <p class="tagline">Designed & Engineered with precision.</p>
     </div>
 </footer>
 
@@ -8,14 +13,18 @@
     .footer-content {
         display: flex;
         flex-direction: column;
+        gap: 0.75rem;
         align-items: center;
-        gap: 0.5rem;
+        justify-content: center;
     }
 
-    .footer-tagline {
-        font-size: 0.85rem;
-        opacity: 0.9;
-        font-style: italic;
-        font-weight: 400;
+    p {
+        margin: 0;
+    }
+
+    .tagline {
+        color: var(--accent-gold);
+        font-size: 0.75rem;
+        opacity: 0.7;
     }
 </style>

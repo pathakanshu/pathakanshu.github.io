@@ -8,10 +8,12 @@ const pageTitle = "Projects | Anshu Pathak";
 
 <BaseLayout pageTitle={pageTitle}>
     <section class="page-header">
+        <span class="hero-subtitle">Archive</span>
         <h1>Projects</h1>
         <p>
-            A curated selection of work focused on clear UX, strong engineering
-            fundamentals, and practical problem-solving.
+            A curated selection of my work spanning frontend interfaces, robust
+            backend architectures, and experimental designs. Built with modern
+            web technologies and a focus on performance.
         </p>
     </section>
 
@@ -31,87 +33,49 @@ const pageTitle = "Projects | Anshu Pathak";
 
         {
             projects.projects.length === 0 && (
-                <div class="empty-state">
+                <div class="panel empty-state">
                     <h2>No projects yet</h2>
                     <p>
-                        I'm currently preparing case studies. Check back soon.
+                        I'm currently preparing detailed case studies. Check
+                        back soon.
                     </p>
                 </div>
             )
         }
     </section>
 
-    <section class="page-cta">
-        <p>Want to see more or collaborate on something meaningful?</p>
-        <div class="cta-actions">
-            <a href="/" class="btn btn-secondary">Back Home</a>
-            <a href="/contact" class="btn btn-primary">Contact Me</a>
+    <section class="panel cta">
+        <h2>See something you like?</h2>
+        <p>
+            Whether you want to discuss a project, ask about my code, or just
+            say hello, I'm always open to interesting conversations.
+        </p>
+        <div class="actions">
+            <a href="/contact" class="btn btn-primary">Start a Conversation</a>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
         </div>
     </section>
 </BaseLayout>
 
 <style>
-    .page-header {
-        display: grid;
-        gap: 0.75rem;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 1.5rem;
-    }
-
-    .page-header h1 {
-        margin: 0;
-    }
-
-    .page-header p {
-        margin: 0;
-        max-width: 68ch;
-    }
-
-    .projects-section {
-        display: grid;
-        gap: 1rem;
-    }
-
     .empty-state {
-        border: 1px solid var(--border);
-        background: var(--surface);
-        padding: 1.25rem;
-        border-radius: var(--radius-none);
+        text-align: center;
+        padding: 6rem 2rem;
+        border-style: dashed;
+        border-color: var(--border-subtle);
     }
 
     .empty-state h2 {
-        margin: 0 0 0.5rem 0;
+        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
     }
 
     .empty-state p {
-        margin: 0;
+        margin: 0 auto;
     }
 
-    .page-cta {
-        border-top: 1px solid var(--border);
-        padding-top: 1.5rem;
-        display: grid;
-        gap: 0.9rem;
-    }
-
-    .page-cta p {
-        margin: 0;
-    }
-
-    .cta-actions {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-    }
-
-    @media (max-width: 640px) {
-        .cta-actions {
-            width: 100%;
-        }
-
-        .cta-actions .btn {
-            width: 100%;
-            text-align: center;
-        }
+    .cta {
+        margin-top: 4rem;
+        text-align: left;
     }
 </style>

@@ -7,21 +7,25 @@ const pageTitle = "Anshu Pathak | Software Engineer";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <section class="main-info">
+    <section class="hero-section">
         <div class="hero-grid">
             <div class="hero-copy">
+                <span class="hero-subtitle">Software Engineering Student</span>
                 <h1>Anshu Pathak</h1>
-                <div class="lower-info">
-                    <p>Software Engineering Student</p>
-                    <p>Pennsylvania, USA · Expected Graduation 2029</p>
-                    <p>Focused on building clean, useful, reliable software.</p>
+                <p>
+                    I build sleek, high-performance web applications. Focused on
+                    clean architecture, striking design, and robust engineering.
+                </p>
+                <div class="actions">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="/about" class="btn btn-secondary">About Me</a>
                 </div>
             </div>
 
-            <div class="hero-image" aria-label="Hero placeholder image">
+            <div class="hero-image" aria-label="Hero abstract image">
                 <img
-                    src="https://placehold.co/640x360"
-                    alt="General placeholder"
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                    alt="Creative abstract coding visualization"
                     loading="eager"
                     decoding="async"
                 />
@@ -29,12 +33,15 @@ const pageTitle = "Anshu Pathak | Software Engineer";
         </div>
     </section>
 
-    <section>
-        <h2>Featured Projects</h2>
-        <p>
-            Selected work across frontend and backend development. Clear
-            implementations, practical problem-solving, and maintainable code.
-        </p>
+    <section id="projects">
+        <div style="margin-bottom: 3rem;">
+            <h2>Selected Works</h2>
+            <p>
+                A curated collection of my recent engineering and design
+                projects.
+            </p>
+        </div>
+
         <div class="projects-section">
             {
                 projects.projects.map((project: any) => (
@@ -51,56 +58,20 @@ const pageTitle = "Anshu Pathak | Software Engineer";
         </div>
     </section>
 
-    <section class="cta-section">
-        <h2>Work With Me</h2>
+    <section class="panel cta">
+        <h2>Let's build something exceptional.</h2>
         <p>
-            I’m open to internships, collaborations, and interesting software
-            projects.
+            I'm actively looking for internships, creative collaborations, and
+            complex problems to solve. Reach out if you'd like to work together.
         </p>
-        <div class="cta-buttons">
-            <a href="/projects" class="btn btn-primary">View Projects</a>
-            <a href="/about" class="btn btn-secondary">About Me</a>
+        <div class="actions">
+            <a href="/contact" class="btn btn-primary">Get in Touch</a>
+            <a
+                href="https://github.com/pathakanshu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary">GitHub</a
+            >
         </div>
     </section>
 </BaseLayout>
-
-<style>
-    .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .hero-copy h1 {
-        margin-bottom: 0.5rem;
-    }
-
-    .hero-image {
-        border: 1px solid var(--border);
-        background: var(--surface-soft);
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-    }
-
-    .hero-image img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    @media (max-width: 900px) {
-        .hero-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 420px;
-            height: auto;
-            aspect-ratio: 16 / 10;
-        }
-    }
-</style>
