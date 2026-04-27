@@ -2,6 +2,57 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About | Anshu Pathak";
+
+const skillSlugs: Record<string, string> = {
+    React: "react",
+    TypeScript: "typescript",
+    JavaScript: "javascript",
+    Python: "python",
+    "Node.js": "nodedotjs",
+    "HTML/CSS": "html5",
+    HTML: "html5",
+    CSS: "css3",
+    "CSS Architecture": "css3",
+    Django: "django",
+    APIs: "insomnia",
+    PostgreSQL: "postgresql",
+    MongoDB: "mongodb",
+    Docker: "docker",
+    Git: "git",
+    GitHub: "github",
+    Astro: "astro",
+    Vue: "vuedotjs",
+    Angular: "angular",
+    Express: "express",
+    FastAPI: "fastapi",
+    REST: "postman",
+    "Unix/Linux": "linux",
+    "Vercel/Cloudflare": "vercel",
+};
+
+function getSlug(skill: string): string {
+    const trimmed = skill.trim();
+    if (skillSlugs[trimmed]) return skillSlugs[trimmed];
+
+    for (const key in skillSlugs) {
+        if (trimmed.toLowerCase().startsWith(key.toLowerCase())) {
+            return skillSlugs[key];
+        }
+    }
+
+    if (trimmed.includes("/")) {
+        const firstPart = trimmed.split("/")[0].trim();
+        return skillSlugs[firstPart] || "codeforces";
+    }
+
+    return "codeforces";
+}
+
+const skills = {
+    frontend: ["React", "TypeScript", "Astro", "CSS Architecture"],
+    backend: ["Python", "Node.js", "REST APIs", "PostgreSQL"],
+    systems: ["Git/GitHub", "Docker Basics", "Unix/Linux", "Vercel/Cloudflare"],
+};
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -59,126 +110,57 @@ const pageTitle = "About | Anshu Pathak";
             <div class="skill-category">
                 <h3>Frontend</h3>
                 <div class="skill-group">
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/react/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="React"
-                        />
-                        React
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/typescript/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="TypeScript"
-                        />
-                        TypeScript
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/astro/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Astro"
-                        />
-                        Astro
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/css3/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="CSS Architecture"
-                        />
-                        CSS Architecture
-                    </span>
+                    {
+                        skills.frontend.map((skill) => (
+                            <span class="skill-tag">
+                                <img
+                                    src={`https://cdn.simpleicons.org/${getSlug(skill)}/EDEDED`}
+                                    width="16"
+                                    height="16"
+                                    alt={skill}
+                                />
+                                {skill}
+                            </span>
+                        ))
+                    }
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3>Backend</h3>
                 <div class="skill-group">
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/python/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Python"
-                        />
-                        Python
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/nodedotjs/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Node.js"
-                        />
-                        Node.js
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/insomnia/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="REST APIs"
-                        />
-                        REST APIs
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/postgresql/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="PostgreSQL"
-                        />
-                        PostgreSQL
-                    </span>
+                    {
+                        skills.backend.map((skill) => (
+                            <span class="skill-tag">
+                                <img
+                                    src={`https://cdn.simpleicons.org/${getSlug(skill)}/EDEDED`}
+                                    width="16"
+                                    height="16"
+                                    alt={skill}
+                                />
+                                {skill}
+                            </span>
+                        ))
+                    }
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3>Systems</h3>
                 <div class="skill-group">
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/github/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Git/GitHub"
-                        />
-                        Git/GitHub
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/docker/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Docker Basics"
-                        />
-                        Docker Basics
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/linux/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Unix/Linux"
-                        />
-                        Unix/Linux
-                    </span>
-                    <span class="skill-tag">
-                        <img
-                            src="https://cdn.simpleicons.org/vercel/EDEDED"
-                            width="16"
-                            height="16"
-                            alt="Vercel/Cloudflare"
-                        />
-                        Vercel/Cloudflare
-                    </span>
+                    {
+                        skills.systems.map((skill) => (
+                            <span class="skill-tag">
+                                <img
+                                    src={`https://cdn.simpleicons.org/${getSlug(skill)}/EDEDED`}
+                                    width="16"
+                                    height="16"
+                                    alt={skill}
+                                />
+                                {skill}
+                            </span>
+                        ))
+                    }
                 </div>
             </div>
         </div>
