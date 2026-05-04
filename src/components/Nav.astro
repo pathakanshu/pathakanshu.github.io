@@ -27,7 +27,7 @@ const navItems = [
 </nav>
 
 <style>
-    .mode-toggle {
+    :global(.mode-toggle) {
         background: transparent !important;
         border: none !important;
         cursor: pointer;
@@ -39,22 +39,22 @@ const navItems = [
         transition: color 0.2s ease;
     }
 
-    .mode-toggle:hover,
-    .mode-toggle:focus-visible {
+    :global(.mode-toggle:hover),
+    :global(.mode-toggle:focus-visible) {
         color: var(--text-primary);
         background: transparent !important;
     }
 
-    .sun-icon,
-    .moon-icon {
+    :global(.sun-icon),
+    :global(.moon-icon) {
         width: 18px;
         height: 18px;
         color: var(--text-secondary);
         stroke: var(--text-secondary);
     }
 
-    .mode-toggle:hover .sun-icon,
-    .mode-toggle:hover .moon-icon {
+    :global(.mode-toggle:hover .sun-icon),
+    :global(.mode-toggle:hover .moon-icon) {
         color: var(--text-primary);
         stroke: var(--text-primary);
     }
