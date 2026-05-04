@@ -1,25 +1,32 @@
 {
   "projects": [
     {
-      "name": "Personal Portfolio",
-      "description": "A personal portfolio website built using React and hosted on GitHub Pages.",
-      "link": "",
-      "image": "https://placehold.co/320x160",
-      "skills": "Python, JavaScript, HTML/CSS"
+      "name": "Nepal Election Tracker",
+      "description": "A clean website to track Nepal’s elections live and exposes an API for developers.",
+      "link": "https://election.pathakanshu.com",
+      "image": "/images/nepal-election-tracker.png",
+      "skills": "React, D3.js, HTML, CSS"
     },
     {
-      "name": "E-commerce Website",
-      "description": "An e-commerce website built using Django and React, featuring user authentication and a shopping cart.",
+      "name": "aDaemon",
+      "description": "A Discord bot for technical users that enables deep chat history analysis, graphs chat stats, and runs AI models.",
       "link": "",
-      "image": "https://placehold.co/320x160",
-      "skills": "Python, JavaScript, HTML/CSS"
+      "image": "/images/adaemon.png",
+      "skills": "Python, Matplotlib, API"
     },
     {
-      "name": "Chat Application",
-      "description": "A real-time chat application built using Node.js and Socket.io.",
+      "name": "frep",
+      "description": "A feature-rich CLI tool for searching, fuzzy-searching, and remote SSH search with a clean, extensive UI.",
       "link": "",
-      "image": "https://placehold.co/320x160",
-      "skills": "JavaScript, HTML/CSS"
+      "image": "/images/frep.png",
+      "skills": "Python"
+    },
+    {
+      "name": "Autoficate",
+      "description": "A web app that generates printable certificates in bulk from a CSV file.",
+      "link": "https://github.com/pathakanshu/autoficate",
+      "image": "/images/autoficate.png",
+      "skills": "Python, Flask, HTML, CSS"
     }
   ]
 }

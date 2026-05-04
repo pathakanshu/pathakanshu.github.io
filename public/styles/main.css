@@ -9,6 +9,7 @@
     --text-secondary: #a1a1aa;
 
     --accent-gold: #e5a970;
+    --accent: var(--accent-gold);
     --accent-glow: rgba(229, 169, 112, 0.15);
     --accent-glow-strong: rgba(229, 169, 112, 0.3);
 
