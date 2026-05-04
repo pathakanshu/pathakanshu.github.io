@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Contact | Anshu Pathak";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <section class="page-header">
+        <span class="hero-subtitle">Contact</span>
+        <h1>Let's Connect.</h1>
+        <p>
+            I'm currently seeking internship opportunities and open to exciting
+            freelance projects or collaborations. Feel free to reach out.
+        </p>
+    </section>
+
+    <section class="about-grid">
+        <article class="panel">
+            <h2>Send a Message</h2>
+            <p>
+                The fastest way to reach me is via email. I check my inbox
+                regularly and try to respond within 24 hours.
+            </p>
+            <div class="actions" style="margin-top: 2rem;">
+                <a href="mailto:spam@pathakanshu.com" class="btn btn-primary"
+                    >Email Me</a
+                >
+            </div>
+        </article>
+
+        <aside class="panel">
+            <h2>Socials & Profiles</h2>
+            <ul class="facts-list">
+                <li>
+                    <span>GitHub</span>
+                    <strong
+                        ><a
+                            href="https://github.com/pathakanshu"
+                            target="_blank"
+                            rel="noopener noreferrer">@pathakanshu</a
+                        ></strong
+                    >
+                </li>
+                <li>
+                    <span>LinkedIn</span>
+                    <strong
+                        ><a
+                            href="https://www.linkedin.com/in/pathak-anshu/"
+                            target="_blank"
+                            rel="noopener noreferrer">Anshu Pathak</a
+                        ></strong
+                    >
+                </li>
+            </ul>
+        </aside>
+    </section>
+</BaseLayout>
+
+<style>
+    .facts-list {
+        list-style: none;
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .facts-list li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .facts-list span {
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .facts-list strong {
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        font-weight: 500;
+    }
+
+    .facts-list strong a {
+        color: var(--text-primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .facts-list strong a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+    }
+</style>
